@@ -108,6 +108,91 @@
     display: block; /* Ensure proper spacing */
     margin: 10px auto; /* Center it (optional) */
     }
+    /* Adjustments for tablets and smaller devices */
+@media (max-width: 1024px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+    }
+
+    .product-card {
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.footer-column ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-column ul li {
+        margin: 10px 0;
+    }
+
+    .footer-column ul li a {
+        color: #FFF;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+        color: #007BFF;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid #333;
+        margin-top: 20px;
+    }
+    .footer-container{
+      columns: 3;
+    }
+    .footer-container :first-child{
+      margin: 0;
+    }
+
+/* Adjustments for mobile phones */
+@media (max-width: 600px) {
+    header {
+        padding: 10px;
+    }
+
+    .section {
+        padding: 30px 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr; /* One column per row */
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .product-card img {
+        max-width: 120px;
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+
+    nav a {
+        padding: 5px 10px;
+    }
+
+    .logo {
+        width: 100px; /* Adjust the size of the logo */
+        margin: 5px auto; /* Center it (optional) */
+    }
+}
+
   </style>
   <link rel="icon" type="image/png" href="DALL·E 2025-01-28 20.11.08 - A modern logo for an e-commerce website named 'ShopSphere'. The design incorporates a sleek and minimalistic globe shape to represent 'Sphere' and sho.webp">
 </head>
@@ -321,5 +406,37 @@
       </div>
     </div>
   </section>
+</section>
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-column">
+          <h3>Customer Service</h3>
+          <ul>
+              <li><a href="#help">Help & Support</a></li>
+              <li><a href="#returns">Returns & Exchanges</a></li>
+              <li><a href="#shipping">Shipping Information</a></li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+              <li><a href="#new">New Arrivals</a></li>
+              <li><a href="#best">Best Sellers</a></li>
+              <li><a href="#sales">Sales</a></li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h3>Stay Connected</h3>
+          <ul>
+              <li><a href="#facebook">Facebook</a></li>
+              <li><a href="#twitter">Twitter</a></li>
+              <li><a href="#instagram">Instagram</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      &copy; 2025 YourCompany. All rights reserved.
+  </div>
+</footer>
 </body>
 </html>
