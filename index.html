@@ -4,126 +4,133 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ShopSphere</title>
-  <style>
+<style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #121212;
-      color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        color: #333;
     }
 
     header {
-      background-color: #1f1f1f;
-      padding: 20px;
-      text-align: center;
+        background-color: #ff6347;
+        padding: 20px;
+        text-align: center;
+        color: #fff;
     }
 
     header h1 {
-      margin: 0;
+        margin: 0;
     }
 
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px;
-      background-color: #1f1f1f;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+        background-color: #007bff; /* Updated background color */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
     nav a {
-      text-decoration: none;
-      color: #fff;
-      padding: 10px 20px;
-      background-color: #333;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+        text-decoration: none;
+        color: #fff;
+        padding: 10px 20px;
+        background-color: #ff7e5f; /* Updated button background color */
+        border-radius: 5px;
+        transition: background-color 0.3s;
     }
 
     nav a:hover {
-      background-color: #555;
+        background-color: #ff7f50;
+        transform: translateY(-2px);
     }
 
     .section {
-      padding: 50px 20px;
+        padding: 50px 20px;
     }
 
     h2 {
-      text-align: center;
-      margin-bottom: 20px;
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     .product-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* Four columns per row */
-      gap: 20px;
-      padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 20px;
     }
 
     .product-card {
-      background-color: #1f1f1f;
-      border: 1px solid #333;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .product-card img {
-      width: 100%;
-      max-width: 150px;
-      height: auto;
-      margin-bottom: 10px;
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+        margin-bottom: 10px;
     }
 
     .product-card h3 {
-      margin: 10px 0;
+        margin: 10px 0;
     }
 
     .product-card p {
-      margin: 5px 0 15px;
+        margin: 5px 0 15px;
     }
 
     .product-card button {
-      background-color: #4b94d5;
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+        background-color: #32cd32;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
     }
+
     .product-card:hover {
         transform: translateY(-10px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
+
     .product-card button:hover {
-      background-color: #0088ff;
-    }
-    .logo{
-      width: 150px; /* Adjust the size of the logo */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure proper spacing */
-    margin: 10px auto; /* Center it (optional) */
-    }
-    /* Adjustments for tablets and smaller devices */
-@media (max-width: 1024px) {
-    .product-container {
-        grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+        background-color: #228b22;
     }
 
-    .product-card {
-        padding: 10px; /* Reduced padding for smaller screens */
+    .logo {
+        width: 150px;
+        height: auto;
+        display: block;
+        margin: 10px auto;
     }
 
-    nav {
-        flex-direction: column;
-        gap: 10px;
+    @media (max-width: 1024px) {
+        .product-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .product-card {
+            padding: 10px;
+        }
+
+        nav {
+            flex-direction: column;
+            gap: 10px;
+        }
     }
-}
-.footer-column ul {
+
+    .footer-column ul {
         list-style: none;
         padding: 0;
     }
@@ -133,67 +140,69 @@
     }
 
     .footer-column ul li a {
-        color: #FFF;
+        color: #ff6347;
         text-decoration: none;
         transition: color 0.3s;
     }
 
     .footer-column ul li a:hover {
-        color: #007BFF;
+        color: #1f2ecf;
     }
 
     .footer-bottom {
         text-align: center;
         padding: 10px 0;
-        border-top: 1px solid #333;
+        border-top: 1px solid #ddd;
         margin-top: 20px;
     }
-    .footer-container{
-      columns: 3;
-    }
-    .footer-container :first-child{
-      margin: 0;
+
+    .footer-container {
+        columns: 3;
     }
 
-/* Adjustments for mobile phones */
-@media (max-width: 600px) {
-    header {
-        padding: 10px;
+    .footer-container :first-child {
+        margin: 0;
     }
 
-    .section {
-        padding: 30px 10px;
-    }
+    @media (max-width: 600px) {
+        header {
+            padding: 10px;
+        }
 
-    h2 {
-        font-size: 1.5rem;
-    }
+        .section {
+            padding: 30px 10px;
+        }
 
-    .product-container {
-        grid-template-columns: 1fr; /* One column per row */
-        padding: 10px;
-        gap: 10px;
-    }
+        h2 {
+            font-size: 1.5rem;
+        }
 
-    .product-card img {
-        max-width: 120px;
-    }
+        .product-container {
+            grid-template-columns: 1fr;
+            padding: 10px;
+            gap: 10px;
+        }
 
-    .product-card {
-        padding: 10px;
-    }
+        .product-card img {
+            max-width: 120px;
+        }
 
-    nav a {
-        padding: 5px 10px;
-    }
+        .product-card {
+            padding: 10px;
+        }
 
-    .logo {
-        width: 100px; /* Adjust the size of the logo */
-        margin: 5px auto; /* Center it (optional) */
-    }
-}
+        nav a {
+            padding: 5px 10px;
+        }
 
-  </style>
+        .logo {
+            width: 100px;
+            margin: 5px auto;
+        }
+    }
+</style>
+
+
   <link rel="icon" type="image/png" href="DALL·E 2025-01-28 20.11.08 - A modern logo for an e-commerce website named 'ShopSphere'. The design incorporates a sleek and minimalistic globe shape to represent 'Sphere' and sho.webp">
 </head>
 <body>
